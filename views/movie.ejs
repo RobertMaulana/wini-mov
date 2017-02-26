@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<h1>Movie</h1>
+<ul>
+  <% if(code === 200){
+    for(var i = 0; i < data.length; i++){ %>
+      <li>
+        <img src="<%= data[i].Poster%>" alt="">
+        <p><%= data[i].Title %></p>
+      </li>
+    <% }
+  }else{ %>
+    <p>Sorry your request is failed!</p>
+  <% } %>
+
+</ul>
+<a href="/">Search Again</a>
+<% include partials/footer %>
